@@ -1,19 +1,10 @@
 body, html {
     background: #FFFFFF;
-    font-family: "Oswald", sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: "Verdana", sans-serif;
 }
 
 .header {
     background: #000000;
     color: #0079cc;
-    font-size: 36px;
-    padding: 20px 0;
-    text-align: center;
     text-transform: uppercase;
-}
-
-.main {
-    margin: 40px 0;
 }
