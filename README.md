@@ -2,6 +2,6 @@
 The official Hacksmiths todo list webapp
 
 Authors:
-Hasan Banna
+Hasan Banna,
 Will Nguyen
 
