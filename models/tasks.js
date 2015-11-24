@@ -23,15 +23,15 @@ var Task = mongoose.model('Task', taskSchema);
 module.exports = Task;
 
 // a todo for testing purposes
-var task1 = Task({
-	name: "Hasan",
-	text: "I need timmmberrr!"
-});
+// var task1 = Task({
+// 	name: "Hasan",
+// 	text: "I need timmmberrr!"
+// });
 
-task1.save(function(err) {
-	if(err) throw err;
-	console.log("Task created!");
-})
+// task1.save(function(err) {
+// 	if(err) throw err;
+// 	console.log("Task created!");
+// })
 Task.find({},function(err,tasks){
 	if(err) throw err;
 	console.log(tasks);
