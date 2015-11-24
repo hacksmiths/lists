@@ -2,30 +2,48 @@
 <html>
 	<head>
 		<title>Hacksmiths Todo list</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="index.css">
-		
 	</head>
 	<body>
-
 		<div class="header">
 			<nav class="navbar">
 	      		<div class="container-fluid">
 
-	        	<!-- Logo -->
-	        	<div class="navbar-header">
-	            	<a href="#" class="navbar-brand">Hacksmiths To-Do List</a>
-	        	</div>
+		        	<!-- Logo -->
+		        	<div class="navbar-header">
+		            	<a href="#" class="navbar-brand">Hacksmiths To-Do List</a>
+		        	</div>
 
-	        	<!-- Menu Items -->
-	        	<div>
-		           	<ul class="nav navbar-nav navbar-right">
-		            	<li><a href="#">Home</a></li>	
-		                <li><a href="#">Account<span class="caret"></span></a>
-		              
-							<li><a href="#">Tags</a></li>
-							<li><a href="#">Search</a></li>
-							<li><a href="#">Logout</a></li>
+	        		<!-- Menu Items -->
+	        		<div>
+		           		<ul class="nav navbar-nav navbar-right">
+			            	<li><a href="#">Home</a></li>
+			            	<li><a href="#">Notifications <span class="badge">6</span></a></li>		
+			                <li class="dropdown">
+		                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <span class="caret"></span></a>
+		                        <ul class="dropdown-menu">
+		                            <li><a href="#">Change Password</a></li>
+		                            <li><a href="#">Settings</a></li>
+		                            <li><a href="#">Logout</a></li>
+		                        </ul>
+		                    </li>
+			                <li class="dropdown">
+		                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tags <span class="caret"></span></a>
+		                        <ul class="dropdown-menu">
+		                            <li><a href="#">Starred</a></li>
+		                            <li><a href="#">Hackathons</a></li>
+		                            <li><a href="#">Society</a></li>
+		                            <li><a href="#">Events</a></li>
+		                        </ul>
+		                    </li>		                    
+							<form class="navbar-form navbar-left" role="search">
+							    <div class="form-group">
+							        <input type="text" class="form-control" placeholder="Search">
+							    </div>
+							</form>
 		            	</ul>
 	        		</div>
 				</div>
@@ -35,11 +53,50 @@
 
 		<div class="main">
 			<div class="container-fluid">
-				<h2>Today</h2>
-				<h2>Tomorrow</h2>
-				<h2>This Week</h2>
-				<h2>This Month</h2>
+				<h3>Today</h3>
+				<h3>Tomorrow</h3>
+				<h3>This Week</h3>
+				<h3>This Month</h3>
+
+
+
+				<!-- data-toggle lets you display modal without any JavaScript -->
+			    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#popUpWindow">Add</button>
+
+			    <div class="modal fade" id="popUpWindow">
+			        <div class="modal-dialog">
+			            <div class="modal-content">
+
+			                <!-- header -->
+			                <div class="modal-header">
+			                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+			                    <h3 class="modal-title">To Do Item</h3>
+			                </div>
+
+			                <!-- body (form) -->
+			                <div class="modal-body">
+			                    <form role="form">
+			                        <div class="form-group">
+			                            <input type="email" class="form-control" placeholder="Subject">
+			                        </div>
+			                        <div class="form-group">
+			                            <input type="text" class="form-control" placeholder="Description">
+			                        </div>
+			                    </form>
+			                </div>
+
+			                <!-- footer (button e.g. submit) -->
+			                <div class="modal-footer">
+			                    <button class="btn btn-primary btn-block">Submit</button>
+			                </div>
+
+			            </div>
+			        </div>
+			    </div>
+
 			</div>
+
+
 		</div>
 
 		<div class="footer">
