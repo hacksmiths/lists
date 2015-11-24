@@ -1,4 +1,3 @@
-var Hapi = require('hapi');
 var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://bann.h:rooting@ds047504.mongolab.com:47504/hacksmiths-todo');
@@ -36,29 +35,4 @@ task1.save(function(err) {
 Task.find({},function(err,tasks){
 	if(err) throw err;
 	console.log(tasks);
-});
-
-var server = new Hapi.Server();
-server.connection({
-	host: 'localhost',
-	port: 3000
-});
-
-server.start(function(){
-	console.log("Server running at: ", server.info.uri);
-});
-
-server.register(require('inert'),function(err){
-	if(err){
-		throw err;
-	}
-	server.route({
-		method: 'GET',
-    	path: '/{param*}',
-    	handler:{
-    		directory:{
-    			path:'public'
-    		}
-    	}
-	});
 });
